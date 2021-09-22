@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd'
@@ -32,7 +31,7 @@ function App() {
             </Switch>
           </div>
         </Layout>
-      </div>
+      
       <div className="footer" >
         <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
           Cryptoverse <br />
@@ -40,9 +39,10 @@ function App() {
         </Typography.Title>
         <Space>
           <Link to="/">Home</Link>
-          <Link to="/exchanges">Exchagnes</Link>
+          <Link to="/exchanges">Exchanges</Link>
           <Link to="/news">News</Link>
         </Space>
+        </div>
       </div>
     </div>
   );
