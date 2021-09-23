@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Note to use .env files in React your .env file variables must start with REACT_APP_** if not React will not pickup the variable
+
 ## Available Scripts
 
 In the project directory, you can run:
