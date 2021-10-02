@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: crypto-fabianbrash-com-prd
+  namespace: cryptoapp
+spec:
+  secretName: crypto-fabianbash-com-prd-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: crypto.fabianbrash.com
+  dnsNames:
+  - crypto.fabianbrash.com

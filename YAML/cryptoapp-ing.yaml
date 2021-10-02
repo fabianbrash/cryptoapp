@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: crypto-fb-com-ing
+  namespace: cryptoapp
+  annotations:
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+spec:
+  tls:
+  - hosts:
+    - crypto.fabianbrash.com
+    secretName: crypto-fabianbash-com-prd-tls
+  rules:
+  - host: crypto.fabianbrash.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: crypto-fb-com-svc
+            port:
+              number: 5000
