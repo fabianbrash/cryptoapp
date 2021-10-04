@@ -5,6 +5,9 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm ci --production --silent
 # Copy our code note you need a .dockerignore file so you are not copying things like node_modules etc.
 COPY . .
+
+# Don't I need the key here so it can get injected properly
+ENV REACT_APP_RAPIDAPI_KEY='key_goes_here'
 # Build our app
 RUN npm run build
 
