@@ -31,6 +31,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Note during a production build your ENV variables will be injected into your build so if you don't want sensitive data use another method instead. Reference the below article from the react team.
+
+[Environment variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
