@@ -1,7 +1,7 @@
-import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd'
 import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } from './components';
+import './App.css';
 
 function App() {
   return (

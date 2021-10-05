@@ -5,8 +5,9 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
-import 'antd/dist/antd.css';
 import store from './app/store';
+
+import 'antd/dist/antd.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

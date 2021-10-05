@@ -6,6 +6,7 @@ import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOut
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState(true);
     const [screenSize, setScreenSize] = useState(null);
+    const btc_logo = 'https://d21rna2fnubcu0.cloudfront.net/cryptocurrency.png';
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
@@ -29,7 +30,7 @@ const Navbar = () => {
     return (
         <div className="nav-container">
             <div className="logo-container">
-                <Avatar src='https://d21rna2fnubcu0.cloudfront.net/cryptocurrency.png' size="large"/>
+                <Avatar src={btc_logo} size="large"/>
                 <Typography.Title level={2} className="logo">
                     <Link to="/">Cryptoverse</Link>
                 </Typography.Title>
