@@ -4,10 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fb-font {
-  font-family: 'Rubik', sans-serif !important;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
