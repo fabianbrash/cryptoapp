@@ -21,7 +21,7 @@ spec:
         app: cryptoapp
     spec:
       containers:
-      - image: docker.io/fabianbrash/cryptoapp-serve:0.0.6
+      - image: docker.io/fabianbrash/cryptoapp-serve:0.0.7
         name: cryptoapp
         ports: 
         - containerPort: 5000
