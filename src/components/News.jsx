@@ -12,11 +12,13 @@ const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptone
 
 const News = ({ simplified }) => {
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
-    const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
+    const { data: cryptoNews, error } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
     const { data } = useGetCryptosQuery(100);
 
     //console.log(cryptoNews);
     if(!cryptoNews?.value) return <Loader />;
+
+    if(error) return `Error ${error.status}`
 
     return (
         <div>
