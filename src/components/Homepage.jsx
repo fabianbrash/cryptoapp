@@ -10,14 +10,14 @@ import Loader from './Loader';
 const { Title } = Typography;
 const Homepage = () => {
 
-    const { data, isFetching, error } = useGetCryptosQuery(10);
+    const { data, isFetching, error, isError } = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats;
 
     //console.log(data);
 
     if(isFetching) return <Loader />;
 
-    if(error) return `Error ${error.status}`
+    if(isError) return `Error ${error.status}`
 
 
     return (

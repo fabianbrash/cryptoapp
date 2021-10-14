@@ -15,7 +15,7 @@ const { Option } = Select;
 const CryptoDetails = () => {
     const { coinId } = useParams();
     const [timePeriod, setTimePeriod] = useState('7d');
-    const { data, isFetching, error } = useGetCryptoDetailsQuery(coinId);
+    const { data, isFetching, error, isError } = useGetCryptoDetailsQuery(coinId);
     const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod });
     const cryptoDetails = data?.data?.coin;
 
@@ -25,7 +25,7 @@ const CryptoDetails = () => {
 
     if(isFetching) return <Loader />;
 
-    if(error) return `Error ${error.status}`
+    if(isError) return `Error ${error.status}`
 
     const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 

@@ -10,12 +10,12 @@ const { Text } = Typography;
 const { Panel } = Collapse;
 
 const Exchanges = () => {
-    const { data, isFetching, error } = useGetExchangesQuery();
+    const { data, isFetching, error, isError } = useGetExchangesQuery();
     const exchangesList = data?.data?.exchanges;
 
     if(isFetching) return <Loader />;
 
-    if(error) return `Error ${error.status}`
+    if(isError) return `Error ${error.status}`
 
     return (
         <>

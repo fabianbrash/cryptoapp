@@ -8,7 +8,7 @@ import Loader from './Loader';
 
 const Cryptocurrencies = ({ simplified }) => {
     const count = simplified ? 10 : 100;
-    const { data: cryptosList, isFetching, error } = useGetCryptosQuery(count);
+    const { data: cryptosList, isFetching, error, isError } = useGetCryptosQuery(count);
     //const [cryptos, setCryptos] = useState(cryptosList?.data?.coins);
     const [cryptos, setCryptos] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -26,7 +26,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
     if(isFetching) return <Loader />;
 
-    if(error) return `Error ${error.status}`
+    if(isError) return `Error ${error.status}`
 
     return (
         <>
