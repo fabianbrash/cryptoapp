@@ -7,7 +7,7 @@ RUN npm ci --production --silent
 COPY . .
 
 # Don't I need the key here so it can get injected properly
-ENV REACT_APP_RAPIDAPI_KEY='29077e77f1msheb1aef984c01bd4p15567fjsnca20cd397bf4'
+ENV REACT_APP_RAPIDAPI_KEY='key_goes_here'
 # Build our app
 RUN npm run build
 
