@@ -1,4 +1,4 @@
-DOCKER_TAG = 0.0.8
+DOCKER_TAG = 0.0.9
 
 docker_build:
 		@echo "building and pushing docker image..."

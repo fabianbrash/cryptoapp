@@ -14,10 +14,10 @@ const createRequest = (url) => ({ url, headers: cryptoApiHeaders })
 export const cryptoApi = createApi({
     reducerPath: 'cryptoApi',
     baseQuery: fetchBaseQuery({ baseUrl }),
+    refetchOnFocus: true,
     endpoints: (builder) => ({
         getCryptos: builder.query({
             query: (count) => createRequest(`/coins?limit=${count}`),
-            refetchOnFocus: true,
         }),
         getExchanges: builder.query({
             query: () => createRequest(`/exchanges`),
