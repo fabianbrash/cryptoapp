@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons'
+import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, AlignRightOutlined } from '@ant-design/icons'
 
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState(true);
@@ -35,7 +35,7 @@ const Navbar = () => {
                     <Link to="/">Cryptoverse</Link>
                 </Typography.Title>
                 <Button className="menu-control-container" onClick={() => setActiveMenu(!activeMenu)}>
-                    <MenuOutlined />
+                <AlignRightOutlined />
                 </Button>
             </div>
             {activeMenu && (
